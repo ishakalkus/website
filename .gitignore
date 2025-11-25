@@ -1,0 +1,24 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Editors & IDEs
+.vscode/
+.idea/
+
+# Dependencies / builds
+node_modules/
+dist/
+build/
+.parcel-cache/
+.cache/
+coverage/
+
+# Environment & runtime
+.env
+.env.local
+.env.*.local
+.venv/
+*.log
+tmp/
+temp/
