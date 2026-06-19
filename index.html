@@ -3,68 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>İshak Alkuş | Embedded Systems & IoT Specialist</title>
+  <title>İshak Alkuş | Embedded Systems & IoT Engineer</title>
+  <meta name="description" content="İshak Alkuş — Senior Embedded Systems Engineer & IoT Specialist. Firmware, low-power wireless (LoRaWAN/BLE/NB-IoT/LTE-M), HVDC/BMS, and full-stack IoT.">
+  <link rel="icon" type="image/png" href="Logo_no_name3.png">
+  <link rel="apple-touch-icon" href="Logo_no_name3.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #edf2f9;
-      --panel: rgba(255, 255, 255, 0.9);
-      --card: rgba(255, 255, 255, 0.94);
-      --ink: #0f1a2c;
-      --muted: #55607a;
-      --accent: #2bd9c5;
-      --accent-2: #4f8bff;
-      --line: rgba(15, 26, 44, 0.12);
-      --shadow: 0 16px 45px rgba(15, 26, 44, 0.15);
-      --radius: 18px;
-      color-scheme: light;
+      --bg: #060a12;
+      --bg-2: #0a1019;
+      --panel: rgba(15, 23, 36, 0.72);
+      --panel-solid: #0e1622;
+      --card: rgba(16, 25, 40, 0.85);
+      --ink: #e7eef7;
+      --muted: #8092a8;
+      --dim: #5a6b82;
+      --green: #36e07f;
+      --cyan: #45c7e0;
+      --amber: #f0b429;
+      --brand-red: #a01f33;
+      --line: rgba(69, 199, 224, 0.14);
+      --line-strong: rgba(69, 199, 224, 0.28);
+      --grid: rgba(86, 130, 160, 0.07);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+      --glow: 0 0 0 1px rgba(54, 224, 127, 0.25), 0 0 22px rgba(54, 224, 127, 0.18);
+      --radius: 14px;
+      color-scheme: dark;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       min-height: 100vh;
-      background: radial-gradient(circle at 18% 18%, rgba(43, 217, 197, 0.16), transparent 25%),
-                  radial-gradient(circle at 82% 12%, rgba(79, 139, 255, 0.18), transparent 28%),
-                  linear-gradient(145deg, #f6f9ff 0%, #edf2f9 40%, #e6ecf7 100%);
       color: var(--ink);
-      font-family: 'Manrope', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
       line-height: 1.65;
       overflow-x: hidden;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(circle at 15% 0%, rgba(54, 224, 127, 0.10), transparent 32%),
+        radial-gradient(circle at 88% 8%, rgba(69, 199, 224, 0.12), transparent 34%),
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      background-size: auto, auto, 40px 40px, 40px 40px, auto;
+      background-attachment: fixed;
     }
 
-    main {
-      background: linear-gradient(180deg, rgba(15, 26, 44, 0.03) 0%, rgba(15, 26, 44, 0.06) 100%);
+    /* faint PCB trace overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%2345c7e0' stroke-width='1' stroke-opacity='0.12'%3E%3Cpath d='M0 40 H80 L100 60 H180 M180 60 V140 L160 160 V240'/%3E%3Cpath d='M40 0 V60 L60 80 H120 M120 80 V200'/%3E%3Cpath d='M240 100 H160 L140 120 H40'/%3E%3Cpath d='M200 240 V160 L220 140 V40'/%3E%3C/g%3E%3Cg fill='%2345c7e0' fill-opacity='0.16'%3E%3Ccircle cx='80' cy='40' r='3'/%3E%3Ccircle cx='180' cy='60' r='3'/%3E%3Ccircle cx='60' cy='80' r='3'/%3E%3Ccircle cx='160' cy='160' r='3'/%3E%3Ccircle cx='140' cy='120' r='3'/%3E%3Ccircle cx='220' cy='140' r='3'/%3E%3C/g%3E%3C/svg%3E");
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    .mono { font-family: 'JetBrains Mono', monospace; }
 
     .container {
-      width: min(1200px, 92vw);
+      width: min(1180px, 92vw);
       margin: 0 auto;
       position: relative;
       z-index: 1;
     }
 
+    /* ---------- NAV ---------- */
     .nav {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(255, 255, 255, 0.92);
+      z-index: 30;
+      backdrop-filter: blur(12px);
+      background: rgba(6, 10, 18, 0.82);
       border-bottom: 1px solid var(--line);
     }
 
@@ -72,644 +90,609 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 0;
+      padding: 12px 0;
       gap: 18px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      font-family: 'Space Grotesk', sans-serif;
-    }
+    .brand { display: flex; align-items: center; gap: 12px; }
 
     .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
       display: grid;
       place-items: center;
-      color: #03050c;
-      font-weight: 800;
-      box-shadow: var(--shadow);
+    }
+    .brand-mark img {
+      height: 34px;
+      width: auto;
+    }
+
+    .brand-name { font-weight: 600; letter-spacing: 0.4px; line-height: 1.2; }
+    .brand-sub {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--green);
+      font-size: 0.72rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 6px;
       flex-wrap: wrap;
-      font-size: 0.95rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
     }
 
     .nav-links a {
-      padding: 10px 12px;
-      border-radius: 12px;
-      transition: all 0.2s ease;
+      padding: 8px 11px;
+      border-radius: 9px;
+      transition: all 0.18s ease;
       color: var(--muted);
     }
-
-    .nav-links a:hover {
-      color: var(--ink);
-      background: rgba(15, 26, 44, 0.08);
-    }
+    .nav-links a::before { content: '// '; color: var(--dim); }
+    .nav-links a:hover { color: var(--green); background: rgba(54, 224, 127, 0.08); }
 
     .btn {
-      border: 1px solid var(--line);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      border: 1px solid var(--line-strong);
       color: var(--ink);
-      background: rgba(15, 26, 44, 0.05);
-      border-radius: 14px;
-      padding: 10px 16px;
-      font-weight: 600;
+      background: rgba(69, 199, 224, 0.06);
+      border-radius: 10px;
+      padding: 9px 15px;
+      font-weight: 500;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
-
-    .btn:hover {
-      border-color: rgba(15, 26, 44, 0.22);
-      transform: translateY(-2px);
-    }
+    .btn:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
 
     .btn.primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #04060f;
+      background: linear-gradient(135deg, var(--green), #1fb55f);
+      color: #04130b;
       border: none;
-      box-shadow: var(--shadow);
+      font-weight: 600;
+      box-shadow: var(--glow);
     }
+    .btn.primary:hover { color: #04130b; transform: translateY(-2px); filter: brightness(1.06); }
 
+    /* ---------- HERO ---------- */
     .hero {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
       align-items: center;
-      padding: 80px 0 40px;
+      padding: 70px 0 30px;
     }
+
+    .hero-watermark {
+      position: absolute;
+      top: -30px;
+      right: -90px;
+      width: min(640px, 60vw);
+      opacity: 0.05;
+      z-index: 0;
+      pointer-events: none;
+      filter: grayscale(0.2);
+    }
+
+    .hero > div, .hero > .hero-visual { position: relative; z-index: 1; }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      border-radius: 12px;
-      background: rgba(15, 26, 44, 0.08);
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    h1 {
-      margin: 16px 0 12px;
-      font-size: clamp(2.3rem, 4vw, 3.4rem);
-      line-height: 1.05;
-      font-family: 'Space Grotesk', 'Manrope', sans-serif;
-    }
-
-    .lede {
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 640px;
-      margin-bottom: 18px;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 16px 0 26px;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 14px;
-    }
-
-    .stat {
-      padding: 16px;
-      border-radius: var(--radius);
-      background: var(--card);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.6rem;
-      color: var(--accent);
+      gap: 9px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(54, 224, 127, 0.07);
+      border: 1px solid rgba(54, 224, 127, 0.22);
+      color: var(--green);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
       letter-spacing: 0.5px;
     }
 
-    .stat span {
+    .led {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 8px var(--green);
+      animation: blink 2.2s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.35;} }
+
+    h1 {
+      margin: 18px 0 8px;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.04;
+      letter-spacing: -0.5px;
+    }
+    h1 .accent { color: var(--green); }
+
+    .role-line {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--cyan);
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+    .role-line .cursor {
+      display: inline-block;
+      width: 9px; height: 1.05em;
+      background: var(--green);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: caret 1.05s steps(1) infinite;
+    }
+    @keyframes caret { 0%,50%{opacity:1;} 51%,100%{opacity:0;} }
+
+    .lede {
       color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .chip {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(15, 26, 44, 0.05);
-      color: var(--muted);
-      font-size: 0.9rem;
-      border: 1px solid var(--line);
-    }
-
-    .hero-visual {
-      position: relative;
-      display: grid;
-      place-items: center;
-    }
-
-    .portrait-card {
-      position: relative;
-      padding: 14px;
-      border-radius: 22px;
-      background: linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.75));
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .portrait-card::before {
-      content: '';
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle, rgba(108, 241, 214, 0.08) 0%, transparent 40%);
-      filter: blur(30px);
-      z-index: 0;
-    }
-
-    .portrait {
-      position: relative;
-      z-index: 1;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-    }
-
-    .floating-card {
-      position: absolute;
-      right: -12px;
-      bottom: 14px;
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      max-width: 240px;
-      font-size: 0.95rem;
-    }
-
-    .section {
-      padding: 54px 0 26px;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: flex-end;
+      font-size: 1.04rem;
+      max-width: 620px;
       margin-bottom: 22px;
     }
 
-    .section-header h2 {
-      margin: 0;
-      font-size: 1.6rem;
-      letter-spacing: 0.4px;
-      font-family: 'Space Grotesk', sans-serif;
+    .cta-row { display: flex; flex-wrap: wrap; gap: 11px; margin: 16px 0 26px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
     }
 
-    .section-header p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 540px;
+    .stat {
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
     }
+    .stat::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: linear-gradient(var(--green), var(--cyan));
+    }
+    .stat strong {
+      display: block;
+      font-size: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--green);
+      letter-spacing: 0.5px;
+    }
+    .stat span { color: var(--muted); font-size: 0.86rem; }
+
+    /* terminal portrait */
+    .hero-visual { position: relative; }
+
+    .terminal {
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #0c1422, #0a111c);
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .term-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--line);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--dim);
+    }
+    .dotmac { width: 11px; height: 11px; border-radius: 50%; }
+    .term-title { margin-left: 6px; }
+
+    .term-photo { position: relative; }
+    .term-photo img { width: 100%; display: block; filter: saturate(1.02) contrast(1.02); }
+    .term-photo::after {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, transparent 55%, rgba(6, 10, 18, 0.55) 100%),
+        repeating-linear-gradient(0deg, rgba(0,0,0,0.10) 0px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 4px);
+      pointer-events: none;
+    }
+    .term-photo .scan-badge {
+      position: absolute;
+      left: 12px; top: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--green);
+      background: rgba(6, 10, 18, 0.65);
+      border: 1px solid rgba(54, 224, 127, 0.3);
+      padding: 4px 8px;
+      border-radius: 7px;
+      letter-spacing: 0.5px;
+    }
+
+    .term-foot {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      padding: 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: rgba(0,0,0,0.2);
+    }
+    .term-foot .prompt { color: var(--green); }
+    .term-foot .path { color: var(--cyan); }
+
+    /* ---------- SECTIONS ---------- */
+    main { position: relative; z-index: 1; }
+
+    .section { padding: 56px 0 24px; }
+
+    .section-header { margin-bottom: 26px; }
+    .section-tag {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--green);
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .section-tag::before { content: '> '; color: var(--dim); }
+    .section-header h2 {
+      margin: 0 0 8px;
+      font-size: 1.7rem;
+      letter-spacing: -0.3px;
+    }
+    .section-header p { margin: 0; color: var(--muted); max-width: 600px; }
 
     .panel {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 18px;
-      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+      transition: border-color 0.2s ease, transform 0.2s ease;
     }
+    .panel:hover { border-color: var(--line-strong); }
 
-    .grid {
-      display: grid;
-      gap: 14px;
+    .grid { display: grid; gap: 14px; }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+    .expertise-card { position: relative; }
+    .expertise-card .idx {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--dim);
+      font-size: 0.74rem;
+      letter-spacing: 1px;
     }
+    .expertise-card h3 { margin: 6px 0 8px; font-size: 1.12rem; }
+    .expertise-card h3::before { content: '▹ '; color: var(--cyan); }
+    .expertise-card p { margin: 0 0 12px; color: var(--muted); font-size: 0.93rem; }
 
-    .grid-3 {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-
-    .expertise-card h3 {
-      margin: 0 0 8px;
-      font-size: 1.1rem;
-    }
-
-    .expertise-card p {
-      margin: 0 0 12px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
+    .pill-row { display: flex; flex-wrap: wrap; gap: 7px; }
     .pill {
-      padding: 7px 11px;
-      border-radius: 12px;
-      background: rgba(15, 26, 44, 0.05);
-      color: var(--muted);
-      font-size: 0.9rem;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 5px 10px;
+      border-radius: 8px;
+      background: rgba(69, 199, 224, 0.06);
+      color: var(--cyan);
+      font-size: 0.76rem;
       border: 1px solid var(--line);
     }
 
-    .experience {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 16px;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 10px;
-    }
-
+    /* experience */
+    .experience { display: grid; grid-template-columns: 290px 1fr; gap: 16px; }
+    .timeline { display: grid; gap: 10px; align-content: start; }
     .timeline button {
       width: 100%;
+      font-family: inherit;
       border: 1px solid var(--line);
-      background: rgba(15, 26, 44, 0.04);
+      background: rgba(16, 25, 40, 0.5);
       color: var(--ink);
-      padding: 12px;
-      border-radius: 14px;
+      padding: 13px 14px;
+      border-radius: 11px;
       text-align: left;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      position: relative;
+    }
+    .timeline button strong { display: block; font-size: 0.98rem; }
+    .timeline button span {
+      color: var(--dim);
+      font-size: 0.78rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .timeline button:hover { border-color: var(--line-strong); }
+    .timeline button.active {
+      background: linear-gradient(135deg, rgba(54, 224, 127, 0.12), rgba(69, 199, 224, 0.10));
+      border-color: rgba(54, 224, 127, 0.4);
+      box-shadow: var(--glow);
+    }
+    .timeline button.active strong { color: var(--green); }
+
+    .experience-detail h3 { margin: 0 0 4px; font-size: 1.25rem; }
+    .experience-detail .meta {
+      color: var(--cyan);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.84rem;
+      margin: 0 0 12px;
+    }
+    .experience-detail .exp-summary { color: var(--muted); margin: 0 0 12px; }
+    .experience-detail ul {
+      padding-left: 0;
+      list-style: none;
+      color: var(--muted);
+      display: grid;
+      gap: 9px;
+      font-size: 0.95rem;
+    }
+    .experience-detail ul li { position: relative; padding-left: 22px; }
+    .experience-detail ul li::before {
+      content: '▸';
+      position: absolute; left: 2px;
+      color: var(--green);
+    }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(54, 224, 127, 0.07);
+      color: var(--green);
+      padding: 5px 9px;
+      border-radius: 8px;
+      border: 1px solid rgba(54, 224, 127, 0.18);
+      font-size: 0.74rem;
+    }
+
+    /* projects */
+    .project-carousel {
+      display: grid;
+      grid-template-columns: 42px 1fr 42px;
+      gap: 12px;
+      align-items: center;
+    }
+    .project-track {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 12px;
+    }
+    .project-card {
+      padding: 18px;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--line);
+      display: grid;
+      gap: 10px;
+      opacity: 0.55;
+      transform: scale(0.985);
+      transition: all 0.25s ease;
+    }
+    .project-card.active {
+      opacity: 1;
+      transform: scale(1);
+      border-color: rgba(54, 224, 127, 0.4);
+      box-shadow: var(--glow);
+    }
+    .project-card .pj-id {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--dim);
+      letter-spacing: 1px;
+    }
+    .project-card h3 { margin: 0; font-size: 1.08rem; }
+    .project-card p { margin: 0; color: var(--muted); font-size: 0.93rem; }
+    .project-meta { display: flex; flex-wrap: wrap; gap: 7px; }
+    .project-meta span {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(69, 199, 224, 0.06);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 5px 9px;
+      color: var(--cyan);
+      font-size: 0.74rem;
+    }
+    .control {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      border: 1px solid var(--line-strong);
+      background: var(--card);
+      color: var(--cyan);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      transition: all 0.18s ease;
+    }
+    .control:hover { border-color: var(--cyan); transform: translateY(-2px); box-shadow: var(--glow); }
+    .dots { display: flex; gap: 8px; margin-top: 14px; justify-content: center; }
+    .dot {
+      width: 9px; height: 9px; border-radius: 2px;
+      background: rgba(86, 130, 160, 0.3);
       cursor: pointer;
       transition: all 0.2s ease;
     }
+    .dot.active { background: var(--green); box-shadow: 0 0 8px var(--green); width: 20px; }
 
-    .timeline button strong {
-      display: block;
-    }
-
-    .timeline button span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .timeline button.active {
-      background: linear-gradient(135deg, rgba(43, 217, 197, 0.2), rgba(79, 139, 255, 0.2));
-      border-color: rgba(108, 241, 214, 0.4);
-      transform: translateX(4px);
-      box-shadow: var(--shadow);
-    }
-
-    .experience-detail h3 {
-      margin: 0 0 4px;
-      font-size: 1.2rem;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin: 0 0 10px;
-    }
-
-    .experience-detail ul {
-      padding-left: 18px;
-      color: var(--muted);
+    /* skills */
+    .skills-grid {
       display: grid;
-      gap: 6px;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 14px;
     }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .tag {
-      background: rgba(15, 26, 44, 0.05);
+    .skill-card h3 { margin: 0 0 4px; font-size: 1.05rem; }
+    .skill-card h3 .hex { color: var(--dim); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+    .skill-card p { margin: 0 0 12px; color: var(--muted); font-size: 0.9rem; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-list span {
+      font-family: 'JetBrains Mono', monospace;
+      padding: 5px 9px;
+      border-radius: 7px;
+      background: rgba(255, 255, 255, 0.03);
       color: var(--ink);
-      padding: 6px 10px;
-      border-radius: 12px;
       border: 1px solid var(--line);
-      font-size: 0.9rem;
+      font-size: 0.76rem;
     }
 
-    .project-carousel {
-      position: relative;
+    /* highlights */
+    .achievements {
       display: grid;
-      grid-template-columns: 40px 1fr 40px;
-      gap: 10px;
-      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 14px;
     }
-
-    .project-track {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 12px;
-    }
-
-    .project-card {
+    .achievement {
       padding: 16px;
       border-radius: var(--radius);
       background: var(--card);
       border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      display: grid;
-      gap: 10px;
-      opacity: 0.7;
-      transform: scale(0.98);
-      transition: all 0.25s ease;
-    }
-
-    .project-card.active {
-      opacity: 1;
-      transform: scale(1);
-      border-color: rgba(43, 217, 197, 0.35);
-    }
-
-    .project-card h3 {
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    .project-card p {
-      margin: 0;
       color: var(--muted);
+      font-size: 0.94rem;
+      position: relative;
     }
-
-    .project-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .project-meta span {
-      background: rgba(15, 26, 44, 0.05);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 6px 10px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .control {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: var(--card);
-      color: var(--ink);
-      cursor: pointer;
-      display: grid;
-      place-items: center;
-      transition: all 0.2s ease;
-    }
-
-    .control:hover {
-      border-color: rgba(15, 26, 44, 0.22);
-      transform: translateY(-2px);
-    }
-
-    .dots {
-      display: flex;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: rgba(15, 26, 44, 0.25);
-    }
-
-    .dot.active {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 0 6px rgba(43, 217, 197, 0.16);
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 12px;
-    }
-
-    .skill-card h3 {
-      margin: 0 0 6px;
-      font-size: 1.05rem;
-    }
-
-    .skill-card p {
-      margin: 0 0 10px;
-      color: var(--muted);
-    }
-
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .skill-list span {
-      padding: 6px 9px;
-      border-radius: 10px;
-      background: rgba(15, 26, 44, 0.05);
-      color: var(--ink);
-      border: 1px solid var(--line);
-      font-size: 0.92rem;
-    }
-
-    .achievements {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 12px;
-    }
-
-    .achievement {
-      padding: 14px;
-      border-radius: var(--radius);
-      background: var(--card);
-      border: 1px solid var(--line);
-      color: var(--muted);
-    }
-
     .achievement strong {
       display: block;
       color: var(--ink);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.92rem;
     }
+    .achievement strong::before { content: '[ '; color: var(--green); }
+    .achievement strong::after { content: ' ]'; color: var(--green); }
 
-    .focus-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    /* focus chips */
+    .focus-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .focus-chips span {
+      font-family: 'JetBrains Mono', monospace;
+      padding: 8px 13px;
+      border-radius: 9px;
+      background: rgba(69, 199, 224, 0.05);
+      color: var(--muted);
+      font-size: 0.84rem;
+      border: 1px solid var(--line);
+      transition: all 0.18s ease;
     }
+    .focus-chips span:hover { color: var(--cyan); border-color: var(--line-strong); }
 
+    /* contact */
     .contact {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 16px;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
       align-items: center;
     }
-
-    .contact-card h3 {
-      margin: 0 0 8px;
-      font-size: 1.2rem;
-    }
-
-    .contact-card p {
-      margin: 0 0 12px;
-      color: var(--muted);
-    }
-
-    .contact-grid {
-      display: grid;
-      gap: 10px;
-    }
-
+    .contact-card h3 { margin: 0 0 8px; font-size: 1.35rem; }
+    .contact-card p { margin: 0 0 14px; color: var(--muted); }
+    .contact-grid { display: grid; gap: 10px; }
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      background: rgba(15, 26, 44, 0.05);
+      gap: 11px;
+      padding: 11px 13px;
+      border-radius: 10px;
+      background: rgba(16, 25, 40, 0.55);
       border: 1px solid var(--line);
       color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
     }
+    .contact-item a:hover { color: var(--cyan); }
 
     footer {
-      padding: 22px 0 34px;
-      color: var(--muted);
+      padding: 30px 0 40px;
+      color: var(--dim);
       text-align: center;
-      font-size: 0.95rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      border-top: 1px solid var(--line);
+      margin-top: 30px;
     }
+    footer .green { color: var(--green); }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(12px);
-      transition: all 0.4s ease;
+    .reveal { opacity: 0; transform: translateY(14px); transition: all 0.45s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 44px; }
+      .hero-visual { max-width: 420px; }
+      .experience { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
     }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 960px) {
-      .experience {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .hero {
-        padding-top: 48px;
-      }
-      .cta-row {
-        width: 100%;
-      }
-      .project-carousel {
-        grid-template-columns: 1fr;
-      }
-      .project-track {
-        grid-template-columns: 1fr;
-      }
-      .control {
-        display: none;
-      }
+    @media (max-width: 620px) {
+      .nav-inner { flex-wrap: wrap; }
+      .nav-links { order: 3; width: 100%; }
+      .project-carousel { grid-template-columns: 1fr; }
+      .control { display: none; }
     }
   </style>
 </head>
 <body>
-  <div class="nav">
+  <nav class="nav">
     <div class="container nav-inner">
       <div class="brand">
-        <div class="brand-mark">İA</div>
+        <div class="brand-mark"><img src="Logo_no_name3.png" alt="İshak Alkuş logo"></div>
         <div>
-          <div>İshak Alkuş</div>
-          <small style="color: var(--muted)">Embedded Systems & IoT</small>
+          <div class="brand-name">İshak Alkuş</div>
+          <div class="brand-sub">// embedded · iot</div>
         </div>
       </div>
       <div class="nav-links">
-        <a href="#expertise" data-scroll>Expertise</a>
-        <a href="#experience" data-scroll>Experience</a>
-        <a href="#projects" data-scroll>Systems</a>
-        <a href="#skills" data-scroll>Toolkit</a>
-        <a href="#contact" data-scroll>Contact</a>
+        <a href="#expertise" data-scroll>expertise</a>
+        <a href="#experience" data-scroll>experience</a>
+        <a href="#projects" data-scroll>systems</a>
+        <a href="#skills" data-scroll>toolkit</a>
+        <a href="#contact" data-scroll>contact</a>
       </div>
       <div class="nav-actions">
-        <a class="btn" href="ishak_alkus_cv_2025_11.pdf" download>Download CV</a>
+        <a class="btn primary" href="ishak_alkus_cv_2026_04.pdf" download>↓ CV.pdf</a>
       </div>
     </div>
-  </div>
+  </nav>
 
   <header class="container hero">
+    <img class="hero-watermark" src="Logo_no_name3.png" alt="" aria-hidden="true">
     <div>
-      <div class="eyebrow">Senior Embedded Systems Engineer · 10+ years</div>
-      <h1>İshak Alkuş</h1>
+      <div class="eyebrow"><span class="led"></span> SYSTEM ONLINE · 10+ YEARS IN FIELD</div>
+      <h1>İshak <span class="accent">Alkuş</span></h1>
+      <div class="role-line">Senior Embedded Systems Engineer &amp; IoT Specialist<span class="cursor"></span></div>
       <p class="lede">
-        Embedded Systems Engineer & IoT Specialist delivering 50+ deployments across smart home, industrial IoT, and environmental monitoring. I blend firmware depth, wireless connectivity, low-power design, and HVDC/BMS expertise to turn complex ideas into resilient products.
+        I take ideas from schematic to silicon to cloud — designing firmware, low-power wireless devices, and the hardware abstraction layers that hold industrial IoT together. 50+ commercial products shipped across automation, energy storage, and environmental monitoring.
       </p>
       <div class="cta-row">
-        <a class="btn primary" href="#contact" data-scroll>Work with me</a>
-        <a class="btn" href="ishak_alkus_cv_2025_11.pdf" download>Download CV</a>
+        <a class="btn primary" href="#contact" data-scroll>$ ./hire_me</a>
+        <a class="btn" href="ishak_alkus_cv_2026_04.pdf" download>Download CV</a>
         <a class="btn" href="mailto:ishakalkus@gmail.com">Email</a>
       </div>
       <div class="stats">
         <div class="stat">
           <strong>10+ yrs</strong>
-          <span>Embedded, IoT, and HVDC systems from concept to deployment</span>
+          <span>Embedded, IoT &amp; HVDC, concept to deployment</span>
         </div>
         <div class="stat">
-          <strong>50+ launches</strong>
-          <span>Commercial deployments across smart home, industrial IoT, and monitoring</span>
+          <strong>50+ units</strong>
+          <span>Commercial products in the field</span>
         </div>
         <div class="stat">
           <strong>30+ libs</strong>
-          <span>Reusable firmware libraries & platforms spanning BLE, LoRaWAN, NB-IoT</span>
+          <span>Reusable firmware libraries &amp; platforms</span>
         </div>
-      </div>
-      <div class="chip-row">
-        <div class="chip">Firmware Development</div>
-        <div class="chip">IoT Architecture</div>
-        <div class="chip">Battery Management & HVDC</div>
-        <div class="chip">Wireless Communications</div>
-        <div class="chip">Project Leadership</div>
-        <div class="chip">Industrial HAL Design</div>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="portrait-card">
-        <div class="portrait">
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="dotmac" style="background:#ff5f56"></span>
+          <span class="dotmac" style="background:#ffbd2e"></span>
+          <span class="dotmac" style="background:#27c93f"></span>
+          <span class="term-title">ishak@embedded: ~/profile</span>
+        </div>
+        <div class="term-photo">
+          <span class="scan-badge">● REC · ID: İA-2026</span>
           <img src="ishak.jpg" alt="Portrait of İshak Alkuş">
         </div>
-        <div class="floating-card">
-          Currently leading industrial IoT & microgrid systems as Senior Embedded Systems Engineer at CRATUS (Remote).
+        <div class="term-foot">
+          <span class="prompt">ishak@embedded</span>:<span class="path">~</span>$ whoami<br>
+          &gt; firmware · RF · power · full-stack IoT<br>
+          <span class="prompt">ishak@embedded</span>:<span class="path">~</span>$ status --now<br>
+          &gt; Senior Embedded Eng @ CRATUS (Remote)
         </div>
       </div>
     </div>
@@ -718,62 +701,69 @@
   <main>
     <section class="section container" id="expertise">
       <div class="section-header">
-        <h2>Core Expertise</h2>
-        <p>Bridging low-level firmware, wireless networks, and energy systems with full-stack IoT capabilities.</p>
+        <span class="section-tag">core_expertise</span>
+        <h2>What I Build</h2>
+        <p>Bridging bare-metal firmware, wireless networks, and energy systems with full-stack IoT delivery.</p>
       </div>
       <div class="grid grid-3">
         <div class="panel expertise-card reveal">
-          <h3>Firmware & HAL Design</h3>
-          <p>Production-grade abstractions, portable drivers, and simulation-first workflows.</p>
+          <span class="idx">0x01</span>
+          <h3>Firmware &amp; HAL Design</h3>
+          <p>Production-grade hardware abstraction layers, portable drivers, and simulation-first workflows.</p>
           <div class="pill-row">
-            <div class="pill">Industrial HALs</div>
-            <div class="pill">3,284+ Modbus registers</div>
-            <div class="pill">Simulation vs hardware parity</div>
+            <span class="pill">Industrial HALs</span>
+            <span class="pill">Service-oriented arch</span>
+            <span class="pill">Sim ↔ hardware parity</span>
           </div>
         </div>
         <div class="panel expertise-card reveal">
-          <h3>Wireless & Connectivity</h3>
-          <p>Robust comms across ESP-NOW, LoRaWAN, WiFi, BLE, NB-IoT with runtime pairing and resilience.</p>
+          <span class="idx">0x02</span>
+          <h3>Wireless &amp; Connectivity</h3>
+          <p>Robust comms across ESP-NOW, LoRaWAN, WiFi, BLE, NB-IoT and LTE-M with runtime pairing and resilience.</p>
           <div class="pill-row">
-            <div class="pill">ESP-NOW E2E</div>
-            <div class="pill">LoRaWAN fleets</div>
-            <div class="pill">High-speed UART↔WebSocket</div>
+            <span class="pill">ESP-NOW E2E</span>
+            <span class="pill">LoRaWAN fleets</span>
+            <span class="pill">UART↔WebSocket</span>
           </div>
         </div>
         <div class="panel expertise-card reveal">
-          <h3>Energy & HVDC Systems</h3>
-          <p>Battery management from 24V to 800V, CAN/RS485 integration, and SoC validation benches.</p>
+          <span class="idx">0x03</span>
+          <h3>Energy &amp; HVDC Systems</h3>
+          <p>Battery management from 24V to 800V with CAN/RS485 integration and physics-based SoC validation.</p>
           <div class="pill-row">
-            <div class="pill">BMS architecture</div>
-            <div class="pill">Microgrid integration</div>
-            <div class="pill">OTA + diagnostics</div>
+            <span class="pill">BMS architecture</span>
+            <span class="pill">Microgrid integration</span>
+            <span class="pill">OTA + diagnostics</span>
           </div>
         </div>
         <div class="panel expertise-card reveal">
-          <h3>Low-Power IoT Products</h3>
-          <p>Ultra-long-life designs with aggressive duty cycling and modular connectivity options.</p>
+          <span class="idx">0x04</span>
+          <h3>Low-Power &amp; Analog</h3>
+          <p>Ultra-long-life designs with high-precision analog front-ends and aggressive duty cycling.</p>
           <div class="pill-row">
-            <div class="pill">10+ year battery life</div>
-            <div class="pill">Plug-and-play modules</div>
-            <div class="pill">Field-ready enclosures</div>
+            <span class="pill">10+ year battery life</span>
+            <span class="pill">Precision AFE</span>
+            <span class="pill">FUOTA (BLE/USB)</span>
           </div>
         </div>
         <div class="panel expertise-card reveal">
+          <span class="idx">0x05</span>
           <h3>Full-Stack IoT Apps</h3>
-          <p>React/Node/Flask solutions with WebSocket backbones, analytics, and automated deployments.</p>
+          <p>React/Node/.NET companion apps with WebSocket backbones, analytics, and automated deployment.</p>
           <div class="pill-row">
-            <div class="pill">Web dashboards</div>
-            <div class="pill">Data pipelines</div>
-            <div class="pill">Raspberry Pi & systemd</div>
+            <span class="pill">Web dashboards</span>
+            <span class="pill">.NET/C# tooling</span>
+            <span class="pill">Raspberry Pi + systemd</span>
           </div>
         </div>
         <div class="panel expertise-card reveal">
-          <h3>Leadership & Delivery</h3>
-          <p>Guiding teams, mentoring engineers, and managing clients through complex embedded projects.</p>
+          <span class="idx">0x06</span>
+          <h3>Leadership &amp; Delivery</h3>
+          <p>Guiding teams, mentoring engineers, and steering clients through complex embedded rollouts.</p>
           <div class="pill-row">
-            <div class="pill">30+ projects led</div>
-            <div class="pill">Cross-functional teams</div>
-            <div class="pill">Technical consultation</div>
+            <span class="pill">30+ projects led</span>
+            <span class="pill">Cross-functional teams</span>
+            <span class="pill">Technical consulting</span>
           </div>
         </div>
       </div>
@@ -781,15 +771,16 @@
 
     <section class="section container" id="experience">
       <div class="section-header">
+        <span class="section-tag">git log --career</span>
         <h2>Experience Journey</h2>
-        <p>Selected impact spanning industrial HALs, wireless systems, and research-driven control projects.</p>
+        <p>Selected impact spanning industrial HALs, wireless systems, and research-driven control.</p>
       </div>
       <div class="experience">
-        <div class="timeline panel reveal" id="timeline"></div>
+        <div class="timeline reveal" id="timeline"></div>
         <div class="panel experience-detail reveal">
           <h3 id="exp-title"></h3>
           <p class="meta" id="exp-meta"></p>
-          <p id="exp-summary" class="lede" style="font-size:1rem; color: var(--muted); margin-top: 0;"></p>
+          <p id="exp-summary" class="exp-summary"></p>
           <ul id="exp-list"></ul>
           <div class="tag-row" id="exp-tags"></div>
         </div>
@@ -798,8 +789,9 @@
 
     <section class="section container" id="projects">
       <div class="section-header">
+        <span class="section-tag">ls ./systems</span>
         <h2>Selected Systems</h2>
-        <p>Recent systems that blend hardware, firmware, and web to ship reliable products.</p>
+        <p>Recent builds blending hardware, firmware, and web into reliable field-ready products.</p>
       </div>
       <div class="project-carousel reveal">
         <button class="control" id="prev-project" aria-label="Previous project">‹</button>
@@ -811,50 +803,51 @@
 
     <section class="section container" id="skills">
       <div class="section-header">
+        <span class="section-tag">cat /etc/toolkit</span>
         <h2>Technical Toolkit</h2>
-        <p>From bare-metal firmware to cloud-connected IoT apps and production test infrastructure.</p>
+        <p>From bare-metal firmware to cloud-connected apps and production test infrastructure.</p>
       </div>
       <div class="skills-grid">
         <div class="panel skill-card reveal">
-          <h3>Languages & Firmware</h3>
-          <p>Performance-focused firmware with reusable libraries.</p>
+          <h3>Languages <span class="hex">// .c .cpp .py</span></h3>
+          <p>Performance-focused firmware and tooling.</p>
           <div class="skill-list">
-            <span>C</span><span>C#</span><span>Python</span><span>JavaScript (partial)</span><span>TypeScript (partial)</span>
+            <span>C</span><span>C++</span><span>C#</span><span>Python</span><span>JavaScript</span>
           </div>
         </div>
         <div class="panel skill-card reveal">
-          <h3>MCUs & Wireless</h3>
-          <p>Balanced compute, power, and RF needs per product.</p>
+          <h3>MCUs &amp; Wireless <span class="hex">// rf</span></h3>
+          <p>Balancing compute, power, and RF per product.</p>
           <div class="skill-list">
-            <span>STM32</span><span>ESP32</span><span>PIC</span><span>nRF Series</span><span>LoRaWAN</span><span>WiFi</span><span>BLE</span><span>NB-IoT</span><span>ESP-NOW</span>
+            <span>STM32 (HAL/LL)</span><span>ESP32 (ESP-IDF)</span><span>PIC</span><span>nRF Series</span><span>LoRaWAN</span><span>WiFi</span><span>BLE</span><span>ESP-NOW</span><span>NB-IoT</span><span>LTE-M</span>
           </div>
         </div>
         <div class="panel skill-card reveal">
-          <h3>Protocols & Interfaces</h3>
-          <p>Robust integrations for industrial and cloud systems.</p>
+          <h3>Protocols <span class="hex">// bus</span></h3>
+          <p>Robust integrations for industrial &amp; cloud.</p>
           <div class="skill-list">
-            <span>ModBus RTU/TCP</span><span>RS485</span><span>UART</span><span>I2C</span><span>SPI</span><span>CAN</span><span>HTTP</span><span>MQTT</span><span>WebSocket</span>
+            <span>ModBus RTU/TCP</span><span>RS485</span><span>UART</span><span>I2C</span><span>SPI</span><span>CAN</span><span>HTTP</span><span>MQTT</span><span>WebSocket</span><span>CoAP</span><span>LwM2M</span>
           </div>
         </div>
         <div class="panel skill-card reveal">
-          <h3>OS, Tools & PCB</h3>
-          <p>End-to-end workflow from schematic to debugger.</p>
+          <h3>OS, IDE &amp; PCB <span class="hex">// hw</span></h3>
+          <p>End-to-end from schematic to debugger.</p>
           <div class="skill-list">
-            <span>FreeRTOS</span><span>Zephyr</span><span>Embedded Linux</span><span>Bare-metal</span><span>Eagle</span><span>KiCad</span><span>Altium Designer</span><span>JTAG/SWD</span><span>Oscilloscopes</span><span>Logic Analyzers</span><span>Power Analyzers</span>
+            <span>FreeRTOS</span><span>Zephyr</span><span>Embedded Linux</span><span>Yocto</span><span>Bare-metal</span><span>STM32CubeIDE</span><span>Keil µVision</span><span>Segger ES</span><span>Eagle</span><span>KiCad</span><span>Altium</span>
           </div>
         </div>
         <div class="panel skill-card reveal">
-          <h3>Web & DevOps</h3>
-          <p>Secure IoT backends and deployment automation.</p>
+          <h3>Web &amp; DevOps <span class="hex">// cloud</span></h3>
+          <p>Secure IoT backends and deploy automation.</p>
           <div class="skill-list">
-            <span>React</span><span>Node.js</span><span>Flask</span><span>REST APIs</span><span>WebSocket backbones</span><span>Docker</span><span>systemd</span><span>Raspberry Pi</span><span>Git</span><span>Linux admin</span>
+            <span>React</span><span>Node.js</span><span>.NET / C#</span><span>REST APIs</span><span>WebSocket</span><span>Docker</span><span>systemd</span><span>Raspberry Pi</span><span>Git</span><span>Linux admin</span>
           </div>
         </div>
         <div class="panel skill-card reveal">
-          <h3>Testing & Manufacturing</h3>
-          <p>Scalable validation and field-ready updates.</p>
+          <h3>Lab &amp; Test <span class="hex">// bench</span></h3>
+          <p>Validation, debugging, and field-ready updates.</p>
           <div class="skill-list">
-            <span>Manufacturing test suites</span><span>OTA update flows</span><span>Health monitoring</span><span>Fault injection</span><span>Simulation benches</span>
+            <span>JTAG/SWD</span><span>Oscilloscopes</span><span>Logic Analyzers</span><span>Power Analyzers</span><span>SDRs</span><span>OTA / FUOTA</span><span>Mfg test suites</span><span>Fault injection</span>
           </div>
         </div>
       </div>
@@ -862,58 +855,61 @@
 
     <section class="section container">
       <div class="section-header">
+        <span class="section-tag">./highlights</span>
         <h2>Highlights</h2>
-        <p>Impact snapshots across architecture, uptime, and speed-to-market.</p>
+        <p>Impact snapshots across architecture, reliability, and speed-to-market.</p>
       </div>
       <div class="achievements reveal">
         <div class="achievement">
           <strong>Industrial HAL</strong>
-          Abstracted 3,284+ Modbus registers with a three-tier map (Protocol → Register → Service) and 95% fewer read operations through intelligent batching.
+          Architected the LOMA AI hardware abstraction layer bridging Modbus control boards with cloud microgrids — collapsing thousands of register mappings into a service-oriented API over bidirectional WebSocket.
         </div>
         <div class="achievement">
           <strong>Reusable Platforms</strong>
-          Built 30+ firmware libraries and Lego-style IoT platforms enabling BLE/LoRaWAN/NB-IoT mix-and-match and 60% faster launches.
+          Built 30+ firmware libraries and a Lego-style IoT platform enabling BLE/LoRaWAN/NB-IoT mix-and-match for faster product launches.
         </div>
         <div class="achievement">
-          <strong>Uptime & Reliability</strong>
-          Achieved 99.5% uptime across distributed LoRaWAN networks and deployed across 50+ business sites including BRİSA, Istanbul Airport, Kale, and Vestel.
+          <strong>Uptime &amp; Scale</strong>
+          Deployed across 50+ business sites including BRİSA, Istanbul Airport, Kale Factories, and Vestel, with 20+ km LoRaWAN range in rural environments.
         </div>
         <div class="achievement">
-          <strong>Energy & BMS</strong>
-          Delivered scalable battery management from 24V to 800V with wireless, CAN, and RS485 integrations plus physics-based SoC validation benches.
+          <strong>Energy &amp; BMS</strong>
+          Delivered scalable battery management from 24V to 800V with wireless, CAN, and RS485 integration plus a battery-gauge ASIC simulation bench on synchronized STM32 MCUs.
         </div>
         <div class="achievement">
           <strong>Low-Power Design</strong>
-          Engineered ultra-low-power devices reaching 10–15 year lifetimes on AA LiSOCl2 cells with optimized duty cycling.
+          Engineered ultra-low-power nodes reaching 10+ year lifetimes on single AA LiSOCl₂ cells through aggressive duty cycling and precision analog design.
         </div>
         <div class="achievement">
           <strong>Leadership</strong>
-          Guided 30+ embedded projects end-to-end, mentoring junior engineers and advising clients on complex IoT and industrial rollouts.
+          Steered 30+ embedded projects end-to-end, mentoring junior engineers and advising clients through complex IoT and industrial rollouts.
         </div>
       </div>
     </section>
 
     <section class="section container">
       <div class="section-header">
+        <span class="section-tag">domains[]</span>
         <h2>Industry Focus</h2>
-        <p>Domains where embedded, connectivity, and energy expertise create measurable value.</p>
+        <p>Where embedded, connectivity, and energy expertise create measurable value.</p>
       </div>
       <div class="focus-chips reveal" id="focus-chips"></div>
     </section>
 
     <section class="section container">
       <div class="section-header">
+        <span class="section-tag">./education</span>
         <h2>Education</h2>
         <p>Engineering foundation reinforced by research in adaptive control systems.</p>
       </div>
       <div class="grid grid-2">
         <div class="panel reveal">
           <h3>M. Eng. Electronics Engineering</h3>
-          <p class="meta">Ege University · 2018–2020 (not completed due to COVID-19)</p>
+          <p class="meta mono" style="color:var(--cyan);font-size:0.84rem;">Ege University · 2018–2020 (not completed, COVID-19)</p>
         </div>
         <div class="panel reveal">
-          <h3>B.S. Electrical & Electronics Engineering</h3>
-          <p class="meta">İzmir Katip Çelebi University · 2012–2016 · Exchange in Telecommunications at Poznan University of Technology</p>
+          <h3>B.S. Electrical &amp; Electronics Engineering</h3>
+          <p class="meta mono" style="color:var(--cyan);font-size:0.84rem;">İzmir Katip Çelebi University · 2012–2016 · Exchange @ Poznan University of Technology (2014)</p>
         </div>
       </div>
     </section>
@@ -921,20 +917,20 @@
     <section class="section container" id="contact">
       <div class="contact panel reveal">
         <div class="contact-card">
-          <h3>Let’s build your next system</h3>
+          <h3>Let's build your next system</h3>
           <p>Available for consulting, architecture reviews, and end-to-end embedded product delivery.</p>
           <div class="cta-row">
-            <a class="btn primary" href="mailto:ishakalkus@gmail.com?subject=Project%20inquiry">Email İshak</a>
-            <a class="btn" href="https://wa.me/905558701439?text=Hi%20Ishak%2C%20let%27s%20talk%20about%20an%20embedded%20project" target="_blank" rel="noreferrer">WhatsApp me</a>
+            <a class="btn primary" href="mailto:ishakalkus@gmail.com?subject=Project%20inquiry">$ email --send</a>
+            <a class="btn" href="https://wa.me/905558701439?text=Hi%20Ishak%2C%20let%27s%20talk%20about%20an%20embedded%20project" target="_blank" rel="noreferrer">WhatsApp</a>
             <button class="btn" id="copy-email">Copy email</button>
-            <a class="btn" href="ishak_alkus_cv_2025_11.pdf" download>Download CV</a>
+            <a class="btn" href="ishak_alkus_cv_2026_04.pdf" download>Download CV</a>
           </div>
         </div>
         <div class="contact-grid">
-          <div class="contact-item">📍 İzmir, Türkiye (Remote-friendly)</div>
+          <div class="contact-item">📍 İzmir, Türkiye · Remote-friendly</div>
           <div class="contact-item">📱 +90 555 870 14 39</div>
           <div class="contact-item">📧 ishakalkus@gmail.com</div>
-          <div class="contact-item">💬 <a href="https://wa.me/905558701439" target="_blank" rel="noreferrer">WhatsApp me</a></div>
+          <div class="contact-item">💬 <a href="https://wa.me/905558701439" target="_blank" rel="noreferrer">wa.me/905558701439</a></div>
           <div class="contact-item">🔗 <a href="https://linkedin.com/in/ishakalkus" target="_blank" rel="noreferrer">linkedin.com/in/ishakalkus</a></div>
         </div>
       </div>
@@ -942,7 +938,7 @@
   </main>
 
   <footer class="container">
-    Building resilient embedded & IoT systems with clarity and care.
+    <span class="green">$</span> echo "Building resilient embedded &amp; IoT systems with clarity and care." &nbsp;//&nbsp; İshak Alkuş © 2026
   </footer>
 
   <script>
@@ -952,16 +948,17 @@
         role: 'Senior Embedded Systems Engineer',
         location: 'Remote',
         period: '2022 — Present',
-        summary: 'Leading industrial IoT, microgrid, and wireless systems from HAL architecture to full-stack applications.',
+        summary: 'Leading industrial IoT, microgrid, energy, and wireless systems from HAL architecture to full-stack companion apps.',
         highlights: [
-          'Architected an industrial HAL mapping 3,284+ Modbus registers with a three-tier Protocol → Register → Service design and 95% fewer read operations through intelligent batching.',
-          'Built dual-mode architecture with simulation and production hardware parity plus physics-based fault injection lab (8 fault types) for safe testing.',
-          'Implemented ESP-NOW UART↔UART comms with ACK/heartbeat, runtime smart pairing, and a high-speed UART→WebSocket bridge.',
-          'Delivered a Smart BESS planning web app (React, Node.js, Python) that pulls climate/location data, surveys buildings, and recommends storage with ROI calculations.',
-          'Shipped 10+ WiFi/BLE products and 30+ reusable firmware libraries in a Lego-style IoT platform spanning BLE, LoRaWAN, and NB-IoT connectivity.',
-          'Engineered BMS solutions from 24V to 800V with wireless, CAN, and RS485, plus manufacturing test automation, OTA updates, and systemd-managed deployments on Raspberry Pi.'
+          'Architected the LOMA AI Hardware Abstraction Layer bridging Modbus control boards with cloud microgrids — thousands of register mappings collapsed into a service-oriented API over bidirectional WebSocket.',
+          'Designed a dual wireless CAN-BUS bridge using a proprietary protocol reaching 500 m in metal-dense environments, with a WiFi controller forwarding CAN traffic to the cloud.',
+          'Built a configurable Modbus→MQTT bridge with Ethernet, WiFi, NB-IoT and LTE-M, OTA register mapping, and in-field provisioning.',
+          'Implemented a high-speed UART→WebSocket bridge on ESP32 + STM32, plus ESP-NOW UART↔UART comms with ACK/heartbeat and runtime smart pairing.',
+          'Developed a soil thermal-conductance measurement device (ESP-IDF/FreeRTOS) with a high-grade analog front-end and FUOTA over both BLE and USB, now live in the field.',
+          'Engineered BMS solutions from 24V to 800V with CAN/RS485, plus a battery-gauge ASIC simulation bench on synchronized STM32 MCUs and a custom .NET/C# control & logging app.',
+          'Designed a LoRaWAN wildfire-detection node (GNSS + CO + CO₂) with adaptive false-positive filtering and a 10+ year maintenance-free battery life.'
         ],
-        tags: ['HAL Design', 'IoT Architecture', 'WebSocket', 'Modbus', 'ESP-NOW', 'LoRaWAN', 'BMS', 'React/Node/Python', 'Raspberry Pi']
+        tags: ['HAL Design', 'IoT Architecture', 'WebSocket', 'Modbus', 'ESP-NOW', 'CAN-BUS', 'BMS', 'FUOTA', '.NET/C#', 'Raspberry Pi']
       },
       {
         company: 'SKYSENS',
@@ -970,9 +967,9 @@
         period: '2018 — 2021',
         summary: 'Built and shipped LoRaWAN devices and low-power industrial solutions at production scale.',
         highlights: [
-          'Developed 20+ LoRaWAN device types for environmental and industrial monitoring, deployed across 50+ sites including BRİSA, Istanbul Airport, Kale, and Vestel.',
-          'Achieved 20+ km rural communication range and 10+ year battery life on AA LiSOCl2 through aggressive power optimization.',
-          'Created OTA-programmable ModBus integrations for industrial control systems and specialized solutions for magnetic car park detection and wildfire monitoring.',
+          'Developed 20+ LoRaWAN device types for environmental and industrial monitoring, deployed across 50+ sites including BRİSA, Istanbul Airport, Kale Factories, and Vestel.',
+          'Achieved 20+ km rural communication range and 10+ year battery life on single AA LiSOCl₂ cells through aggressive power optimization.',
+          'Designed OTA-programmable Modbus master integration for industrial control systems on LoRaWAN Class C, plus magnetic car-park detection and wildfire monitoring.',
           'Built Python and C# manufacturing test and update suites to scale production reliably.'
         ],
         tags: ['LoRaWAN', 'Low-Power Design', 'OTA', 'Manufacturing Tests', 'ModBus', 'Power Optimization']
@@ -982,9 +979,9 @@
         role: 'Research Engineer',
         location: 'Türkiye',
         period: '2016 — 2018',
-        summary: 'Research on adaptive control systems with experimental validations.',
+        summary: 'Research on robust adaptive control systems with experimental validation.',
         highlights: [
-          'Led research: “Robust Adaptive Controller Design and Applications with Guaranteed Online Stability.”',
+          'Led the research project “Robust Adaptive Controller Design and Applications with Guaranteed Online Stability.”',
           'Designed and simulated adaptive control systems in MATLAB & Simulink; validated on drones, inverted pendulums, chaotic mixers, and robotic systems.',
           'Published two peer-reviewed conference papers on adaptive control applications.'
         ],
@@ -994,40 +991,50 @@
 
     const projects = [
       {
-        title: 'Industrial HAL for Microgrids',
-        description: 'Bridged Modbus control boards with cloud microgrid EMS via a three-tier abstraction, service-oriented design, and batching engine.',
-        meta: ['3,284 registers', '95% fewer reads', 'Simulation + production parity']
+        title: 'Dual Wireless CAN-BUS Bridge',
+        description: 'Cable-free CAN link using a proprietary protocol reaching 500 m in metal-dense environments, with a WiFi path that forwards CAN traffic to the cloud.',
+        meta: ['CAN-BUS', '500 m range', 'WiFi→Cloud']
       },
       {
-        title: 'ESP-NOW & High-Speed Bridges',
-        description: 'Delivered UART↔UART ESP-NOW stack with ACK/heartbeat and runtime pairing, plus ultra-fast UART→WebSocket bridging on ESP32.',
-        meta: ['ESP-NOW', 'Heartbeat & ACK', 'Collision-safe pairing']
+        title: 'LOMA AI Industrial HAL',
+        description: 'Production-grade hardware abstraction layer bridging Modbus control boards with cloud microgrids via a service-oriented API and bidirectional WebSocket.',
+        meta: ['Thousands of registers', 'Service-oriented', 'WebSocket']
+      },
+      {
+        title: 'Modbus → MQTT Bridge',
+        description: 'Configurable bridge with Ethernet / WiFi / NB-IoT / LTE-M, OTA register mapping, and in-field provisioning and credential setup.',
+        meta: ['Multi-connectivity', 'OTA config', 'Field provisioning']
+      },
+      {
+        title: 'Soil Thermal Conductance Sensor',
+        description: 'Precision measurement device on ESP32 (ESP-IDF/FreeRTOS) with a high-grade analog front-end and FUOTA over BLE and USB. Live in the field.',
+        meta: ['Precision AFE', 'FUOTA BLE/USB', 'In production']
+      },
+      {
+        title: 'Battery Gauge ASIC Sim Bench',
+        description: 'Development bed for battery-gauge ICs on synchronized STM32 MCUs with high-precision AFEs and a custom .NET/C# app for real-time logging and control.',
+        meta: ['Synced STM32', 'High-precision AFE', '.NET/C# app']
+      },
+      {
+        title: 'LoRaWAN Wildfire Node',
+        description: 'Forest-safety node with GNSS, CO and CO₂ sensing and adaptive false-positive filtering, achieving 10+ years maintenance-free operation.',
+        meta: ['LoRaWAN', 'GNSS + CO/CO₂', '10+ yr battery']
       },
       {
         title: 'Smart BESS Planner',
-        description: 'React + Node.js + Python web app using climate/location data to recommend storage, solar, and inverter mixes with ROI calculations.',
-        meta: ['Full-stack', 'Data-driven recommendations', 'Energy planning']
-      },
-      {
-        title: 'LoRaWAN Sensor Fleet',
-        description: '20+ device types for environmental and industrial monitoring with 20+ km range and decade-long battery life.',
-        meta: ['LoRaWAN', 'Ultra-low-power', '50+ deployments']
-      },
-      {
-        title: 'HVDC & BMS Platforms',
-        description: 'Battery management from 24V–800V integrating wireless, CAN, and RS485 with SoC validation benches and OTA updates.',
-        meta: ['24–800V BMS', 'CAN/RS485', 'OTA + diagnostics']
+        description: 'Full-stack React + Node.js app for battery energy storage planning, calculating ROI and consumption from real-time climate and location APIs.',
+        meta: ['Full-stack', 'ROI engine', 'Energy planning']
       }
     ];
 
     const focusAreas = [
-      'Smart Home & Building Automation',
       'Industrial IoT & Process Control',
       'Battery Management & Energy Storage',
-      'Electric Vehicle Systems',
       'Microgrid Energy Management',
-      'Agricultural Technology',
+      'Electric Vehicle Systems',
+      'Smart Home & Building Automation',
       'Environmental IoT & Monitoring',
+      'Smart Metering',
       'Transportation & Infrastructure'
     ];
 
@@ -1055,7 +1062,6 @@
       btn.addEventListener('click', () => renderExperience(index));
       timelineEl.appendChild(btn);
     });
-
     renderExperience(0);
 
     const track = document.getElementById('project-track');
@@ -1070,7 +1076,9 @@
       projects.forEach((project, index) => {
         const card = document.createElement('article');
         card.className = 'project-card' + (index === currentProject ? ' active' : '');
+        const id = String(index + 1).padStart(2, '0');
         card.innerHTML = `
+          <span class="pj-id">SYS_${id} / ${String(projects.length).padStart(2,'0')}</span>
           <h3>${project.title}</h3>
           <p>${project.description}</p>
           <div class="project-meta">
@@ -1081,10 +1089,7 @@
 
         const dot = document.createElement('div');
         dot.className = 'dot' + (index === currentProject ? ' active' : '');
-        dot.addEventListener('click', () => {
-          currentProject = index;
-          renderProjects();
-        });
+        dot.addEventListener('click', () => { currentProject = index; renderProjects(); });
         dots.appendChild(dot);
       });
     };
@@ -1102,7 +1107,6 @@
     const focusEl = document.getElementById('focus-chips');
     focusAreas.forEach(area => {
       const span = document.createElement('span');
-      span.className = 'chip';
       span.textContent = area;
       focusEl.appendChild(span);
     });
@@ -1111,9 +1115,7 @@
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
@@ -1123,7 +1125,7 @@
         navigator.clipboard.writeText(email).then(() => {
           const btn = document.getElementById('copy-email');
           const original = btn.textContent;
-          btn.textContent = 'Copied!';
+          btn.textContent = '✓ Copied!';
           setTimeout(() => btn.textContent = original, 1400);
         });
       }
@@ -1131,12 +1133,9 @@
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.15 });
-
+    }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
